@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Boombox in the Park</title>
+  <title>iPod Video</title>
   <style>
-    /* CSS styling for the boombox and park */
+    /* CSS styling for the iPod Video */
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background-color: #6BBE92;
+      background-color: #000;
       margin: 0;
       padding: 0;
     }
-    .park {
-      background-image: url('park-background.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .boombox {
-      width: 450px;
-      height: 600px;
-      background-color: #3B574A;
+    .ipod {
+      width: 300px;
+      height: 500px;
+      background-color: #000;
+      margin: 50px auto;
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       position: relative;
     }
     .display {
       width: 100%;
-      height: 100px;
+      height: 200px;
       background-color: #444;
       margin-bottom: 10px;
       padding: 5px;
@@ -42,8 +35,8 @@
     }
     .button {
       display: inline-block;
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
       background-color: #777;
       border-radius: 50%;
       margin: 10px;
@@ -57,16 +50,14 @@
   </style>
 </head>
 <body>
-  <div class="park">
-    <div class="boombox">
-      <div class="display" id="display">Type something...</div>
-      <div>
-        <div class="button" onclick="changeText('Button 1')">1</div>
-        <div class="button" onclick="changeText('Button 2')">2</div>
-        <div class="button" onclick="changeText('Button 3')">3</div>
-        <div class="button" onclick="changeText('Button 4')">4</div>
-        <div class="button" onclick="changeText('Button 5')">5</div>
-      </div>
+  <div class="ipod">
+    <div class="display" id="display">iPod Video</div>
+    <div>
+      <div class="button" onclick="changeText('Menu')">Menu</div>
+      <div class="button" onclick="changeText('Play')">Play</div>
+      <div class="button" onclick="changeText('Pause')">Pause</div>
+      <div class="button" onclick="changeText('Next')">Next</div>
+      <div class="button" onclick="changeText('Previous')">Previous</div>
     </div>
   </div>
 
