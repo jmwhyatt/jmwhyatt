@@ -14,24 +14,35 @@
       height: 100vh;
     }
 
-    .rectangle {
+    .outer-rectangle {
+      position: relative;
       width: 240px;
       height: 410px;
       background-color: #000;
       border-radius: 20px;
     }
-    .display {
+
+    .inner-rectangle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
       width: 200px;
-      height: 205px;
+      height: 200px;
       background-color: #fff;
-      border-radius: 20px;
+      border-radius: 10px;
     }
   </style>
   <title>One-Page Template</title>
 </head>
 <body>
-  <div class="rectangle"></div>
+  <div class="outer-rectangle">
+    <div class="inner-rectangle"></div>
+  </div>
 
   <script>
     // Add JavaScript code here (optional)
+  </script>
+</body>
+</html>
+
  
