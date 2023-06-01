@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Modern and Edgy Template</title>
+  <title>Cool Kitchen Template</title>
   <style>
     /* CSS Styles */
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #333;
-      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f6f6f6;
+      color: #333;
       margin: 0;
       padding: 0;
     }
@@ -15,51 +15,57 @@
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px;
       text-align: center;
     }
     
     h1 {
       font-size: 48px;
-      color: #ff6f00;
-      margin-bottom: 20px;
-    }
-    
-    p {
-      font-size: 18px;
+      color: #333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       margin-bottom: 30px;
     }
     
-    button {
-      padding: 12px 24px;
-      background-color: #ff6f00;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
     }
     
-    button:hover {
-      background-color: #d45f00;
+    .floating-text {
+      display: inline-block;
+      position: relative;
+      font-size: 36px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #ff6f00;
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      animation: floatAnimation 5s infinite;
+    }
+    
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to the Modern and Edgy Template</h1>
-    <p>This is a stylish one-page HTML template with an edgy design.</p>
+    <h1>Welcome to the Cool Kitchen Template</h1>
+    <p>This is a clean and modern one-page HTML template inspired by a stylish kitchen.</p>
     
-    <button id="myButton">Click Me</button>
+    <div class="floating-text">Modern Kitchen</div>
     
     <script>
       // JavaScript code
-      var button = document.getElementById('myButton');
-      
-      button.addEventListener('click', function() {
-        alert('Button Clicked!');
-      });
     </script>
   </div>
 </body>
