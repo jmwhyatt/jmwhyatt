@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Floating Text Focus Template</title>
+  <title>Floating Text with Expandable Buttons</title>
   <style>
     /* CSS Styles */
     body {
@@ -14,6 +14,7 @@
     
     .container {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
@@ -28,22 +29,66 @@
       animation: floatAnimation 5s infinite;
     }
     
-    @keyframes floatAnimation {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-      100% {
-        transform: translateY(0);
-      }
+    .button-container {
+      margin-top: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: #95B0B4;
+      border-radius: 50%;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .button:hover {
+      transform: scale(1.1);
+    }
+    
+    .text-field {
+      display: none;
+      font-size: 24px;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #324B4E;
+      border-radius: 4px;
+      color: #fff;
+    }
+    
+    .expanded {
+      display: block;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="floating-text">Jacob M. Whyatt</div>
+    
+    <div class="button-container">
+      <div class="button" onclick="expandTextField(1)"></div>
+      <div class="button" onclick="expandTextField(2)"></div>
+      <div class="button" onclick="expandTextField(3)"></div>
+      <div class="button" onclick="expandTextField(4)"></div>
+      <div class="button" onclick="expandTextField(5)"></div>
+    </div>
+    
+    <div class="text-field" id="text-field-1">Button 1 Expanded</div>
+    <div class="text-field" id="text-field-2">Button 2 Expanded</div>
+    <div class="text-field" id="text-field-3">Button 3 Expanded</div>
+    <div class="text-field" id="text-field-4">Button 4 Expanded</div>
+    <div class="text-field" id="text-field-5">Button 5 Expanded</div>
   </div>
+  
+  <script>
+    // JavaScript code
+    function expandTextField(buttonId) {
+      var textField = document.getElementById('text-field-' + buttonId);
+      textField.classList.toggle('expanded');
+    }
+  </script>
 </body>
 </html>
+
