@@ -1,83 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>iPod Video</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* CSS styling for the iPod Video */
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #000;
       margin: 0;
       padding: 0;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    .ipod {
-      width: 320px;
-      height: 480px;
+
+    .rectangle {
+      width: 100px;
+      height: 200px;
       background-color: #000;
-      margin: 50px auto;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      position: relative;
-    }
-    .display {
-      width: 100%;
-      height: 320px;
-      background-color: #000;
-      position: relative;
-    }
-    .button {
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-      background-color: #888;
-      border-radius: 50%;
-      margin: 5px;
-      cursor: pointer;
-      position: absolute;
-      bottom: 30px;
-    }
-    .button.home {
-      left: 30px;
-      background-color: #555;
-    }
-    .button.play {
-      left: 130px;
-      background-color: #2FAB5D;
-    }
-    .button.menu {
-      left: 230px;
-      background-color: #555;
-    }
-    .button-label {
-      color: #fff;
-      font-size: 14px;
-      margin-top: 8px;
+      border-radius: 20px;
     }
   </style>
+  <title>One-Page Template</title>
 </head>
 <body>
-  <div class="ipod">
-    <div class="display" id="display"></div>
-    <div>
-      <div class="button home" onclick="changeText('Home')">
-        <div class="button-label">MENU</div>
-      </div>
-      <div class="button play" onclick="changeText('Play')">
-        <div class="button-label">PLAY</div>
-      </div>
-      <div class="button menu" onclick="changeText('Menu')">
-        <div class="button-label">MENU</div>
-      </div>
-    </div>
-  </div>
+  <div class="rectangle"></div>
 
   <script>
-    // JavaScript code to change the text on button click
-    function changeText(text) {
-      document.getElementById('display').innerHTML = text;
-    }
-  </script>
-</body>
-</html>
+    // Add JavaScript code here (optional)
+ 
