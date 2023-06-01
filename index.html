@@ -39,16 +39,21 @@
       bottom: 30px;
     }
     .button.home {
-      left: 120px;
+      left: 30px;
       background-color: #555;
     }
     .button.play {
-      left: 210px;
+      left: 130px;
       background-color: #2FAB5D;
     }
     .button.menu {
-      left: 300px;
+      left: 230px;
       background-color: #555;
+    }
+    .button-label {
+      color: #fff;
+      font-size: 14px;
+      margin-top: 8px;
     }
   </style>
 </head>
@@ -56,9 +61,15 @@
   <div class="ipod">
     <div class="display" id="display"></div>
     <div>
-      <div class="button home" onclick="changeText('Home')"></div>
-      <div class="button play" onclick="changeText('Play')"></div>
-      <div class="button menu" onclick="changeText('Menu')"></div>
+      <div class="button home" onclick="changeText('Home')">
+        <div class="button-label">MENU</div>
+      </div>
+      <div class="button play" onclick="changeText('Play')">
+        <div class="button-label">PLAY</div>
+      </div>
+      <div class="button menu" onclick="changeText('Menu')">
+        <div class="button-label">MENU</div>
+      </div>
     </div>
   </div>
 
