@@ -1,46 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cool Kitchen Template</title>
+  <title>Floating Text Focus Template</title>
   <style>
     /* CSS Styles */
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #f6f6f6;
-      color: #333;
+      background-color: #938EA5;
+      color: #fff;
       margin: 0;
       padding: 0;
     }
     
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
     }
     
-    h1 {
-      font-size: 48px;
-      color: #333;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      margin-bottom: 30px;
-    }
-    
-    p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-    
     .floating-text {
-      display: inline-block;
-      position: relative;
-      font-size: 36px;
+      font-size: 72px;
       font-weight: bold;
-      color: #fff;
-      background-color: #ff6f00;
-      padding: 12px 24px;
-      border-radius: 8px;
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      color: #C9C3DC;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       animation: floatAnimation 5s infinite;
     }
     
@@ -49,7 +33,7 @@
         transform: translateY(0);
       }
       50% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
       }
       100% {
         transform: translateY(0);
@@ -59,14 +43,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to the Cool Kitchen Template</h1>
-    <p>This is a clean and modern one-page HTML template inspired by a stylish kitchen.</p>
-    
-    <div class="floating-text">Modern Kitchen</div>
-    
-    <script>
-      // JavaScript code
-    </script>
+    <div class="floating-text">Floating Text</div>
   </div>
 </body>
 </html>
