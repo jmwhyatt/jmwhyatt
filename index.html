@@ -16,23 +16,24 @@
 
     .outer-rectangle {
       position: relative;
-      width: 240px;
-      height: 410px;
-      background-color: #000;
-      border-radius: 20px;
+      width: 61.8mm;
+      height: 103.5mm;
+      background-color: transparent;
+      border-radius: 10px;
+      border: 2px solid #000;
     }
 
     .inner-rectangle {
       position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 200px;
-      height: 200px;
-      background-color: #fff;
-      border-radius: 10px;
+      top: 10px;
+      left: 10px;
+      width: 320px;
+      height: 240px;
+      background-color: #000;
+      border-radius: 5px;
     }
   </style>
-  <title>One-Page Template</title>
+  <title>iPod Video Template</title>
 </head>
 <body>
   <div class="outer-rectangle">
@@ -40,7 +41,19 @@
   </div>
 
   <script>
-    // Add JavaScript code here (optional)
+    const outerRectangle = document.querySelector('.outer-rectangle');
+    const innerRectangle = document.querySelector('.inner-rectangle');
+
+    const outerWidth = outerRectangle.offsetWidth;
+    const outerHeight = outerRectangle.offsetHeight;
+
+    const scale = Math.min(outerWidth / 61.8, outerHeight / 103.5);
+
+    const displayWidth = 320 * scale;
+    const displayHeight = 240 * scale;
+
+    innerRectangle.style.width = displayWidth + 'px';
+    innerRectangle.style.height = displayHeight + 'px';
   </script>
 </body>
 </html>
