@@ -12,52 +12,53 @@
       padding: 0;
     }
     .ipod {
-      width: 300px;
-      height: 500px;
+      width: 320px;
+      height: 480px;
       background-color: #000;
       margin: 50px auto;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       position: relative;
     }
     .display {
       width: 100%;
-      height: 200px;
-      background-color: #444;
-      margin-bottom: 10px;
-      padding: 5px;
-      color: #FFF;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 320px;
+      background-color: #000;
+      position: relative;
     }
     .button {
       display: inline-block;
-      width: 50px;
-      height: 50px;
-      background-color: #777;
+      width: 80px;
+      height: 80px;
+      background-color: #888;
       border-radius: 50%;
-      margin: 10px;
+      margin: 5px;
       cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #FFF;
-      font-size: 24px;
+      position: absolute;
+      bottom: 30px;
+    }
+    .button.home {
+      left: 120px;
+      background-color: #555;
+    }
+    .button.play {
+      left: 210px;
+      background-color: #2FAB5D;
+    }
+    .button.menu {
+      left: 300px;
+      background-color: #555;
     }
   </style>
 </head>
 <body>
   <div class="ipod">
-    <div class="display" id="display">iPod Video</div>
+    <div class="display" id="display"></div>
     <div>
-      <div class="button" onclick="changeText('Menu')">Menu</div>
-      <div class="button" onclick="changeText('Play')">Play</div>
-      <div class="button" onclick="changeText('Pause')">Pause</div>
-      <div class="button" onclick="changeText('Next')">Next</div>
-      <div class="button" onclick="changeText('Previous')">Previous</div>
+      <div class="button home" onclick="changeText('Home')"></div>
+      <div class="button play" onclick="changeText('Play')"></div>
+      <div class="button menu" onclick="changeText('Menu')"></div>
     </div>
   </div>
 
