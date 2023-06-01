@@ -16,8 +16,8 @@
 
     .outer-rectangle {
       position: relative;
-      width: 58.6mm;
-      height: 123.4mm;
+      width: 240px;
+      height: 410px;
       background-color: #000;
       border-radius: 20px;
     }
@@ -26,6 +26,8 @@
       position: absolute;
       top: 20px;
       left: 20px;
+      width: 200px;
+      height: 200px;
       background-color: #fff;
       border-radius: 10px;
     }
@@ -38,21 +40,7 @@
   </div>
 
   <script>
-    const outerRectangle = document.querySelector('.outer-rectangle');
-    const innerRectangle = document.querySelector('.inner-rectangle');
-    const borderWidth = 20; // Adjust this value if needed
-
-    const outerWidth = outerRectangle.offsetWidth;
-    const outerHeight = outerRectangle.offsetHeight;
-
-    const innerWidth = outerWidth - (borderWidth * 2);
-    const innerHeight = outerHeight - (borderWidth * 2);
-
-    innerRectangle.style.width = innerWidth + 'px';
-    innerRectangle.style.height = innerHeight + 'px';
-
+    // Add JavaScript code here (optional)
   </script>
 </body>
 </html>
-
- 
