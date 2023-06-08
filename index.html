@@ -1,46 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One-Page Template</title>
   <style>
+    /* CSS Styles */
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
+    }
+    
+    .container {
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      text-align: center;
     }
-
-    .outer-rectangle {
-      position: relative;
-      width: 240px;
-      height: 410px;
-      background-color: #000;
-      border-radius: 20px;
+    
+    .name {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      cursor: default;
     }
-
-    .inner-rectangle {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 200px;
-      height: 200px;
-      background-color: #fff;
-      border-radius: 10px;
+    
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .tab {
+      width: 100px;
+      height: 40px;
+      margin: 0 10px;
+      background-color: #ddd;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .tab:hover {
+      background-color: #aaa;
+    }
+    
+    .content {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #eee;
     }
   </style>
-  <title>One-Page Template</title>
 </head>
 <body>
-  <div class="outer-rectangle">
-    <div class="inner-rectangle"></div>
+  <div class="container">
+    <div class="name">Your Name</div>
+    <div class="tabs">
+      <div class="tab" onmouseover="toggleContent(0)" onmouseout="toggleContent(0)">Tab 1</div>
+      <div class="tab" onmouseover="toggleContent(1)" onmouseout="toggleContent(1)">Tab 2</div>
+      <div class="tab" onmouseover="toggleContent(2)" onmouseout="toggleContent(2)">Tab 3</div>
+    </div>
+    <div class="content">Content for Tab 1</div>
+    <div class="content">Content for Tab 2</div>
+    <div class="content">Content for Tab 3</div>
   </div>
 
   <script>
-    // Add JavaScript code here (optional)
+    // JavaScript code
+    function toggleContent(index) {
+      var contents = document.getElementsByClassName("content");
+      for (var i = 0; i < contents.length; i++) {
+        if (i === index) {
+          contents[i].style.display = "block";
+        } else {
+          contents[i].style.display = "none";
+        }
+      }
+    }
   </script>
 </body>
 </html>
+
