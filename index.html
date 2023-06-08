@@ -13,10 +13,10 @@
     .container {
       height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px;
     }
     
     .name {
@@ -42,14 +42,14 @@
     
     .tabs {
       display: flex;
-      justify-content: center;
-      margin-top: 20px;
+      flex-direction: column;
+      margin-left: 20px;
     }
     
     .tab {
       width: 100px;
       height: 40px;
-      margin: 0 10px;
+      margin-bottom: 10px;
       background-color: #ddd;
       line-height: 40px;
       text-align: center;
@@ -59,7 +59,7 @@
     
     .tab:hover {
       background-color: #aaa;
-      width: 200px; /* Expanded width */
+      height: 60px; /* Expanded height */
     }
     
     .content {
@@ -93,10 +93,10 @@
       for (var i = 0; i < contents.length; i++) {
         if (i === index) {
           contents[i].style.display = "block";
-          tabs[i].style.width = name.offsetWidth + "px";
+          tabs[i].style.height = "60px";
         } else {
           contents[i].style.display = "none";
-          tabs[i].style.width = "100px";
+          tabs[i].style.height = "40px";
         }
       }
     }
