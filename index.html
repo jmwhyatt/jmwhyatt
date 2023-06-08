@@ -32,7 +32,7 @@
     #photo {
       position: absolute;
       top: 10px;
-      left: 20px; /* Adjust the value to move the photo slightly to the right */
+      left: 20px;
       width: 150px;
       height: 150px;
       border-radius: 50%;
@@ -60,6 +60,25 @@
       top: 170px;
       left: 10px;
     }
+
+    .tab {
+      position: absolute;
+      top: 190px;
+      left: 10px;
+      width: calc(33.3333% - 12px);
+      height: 30px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .tab:hover {
+      transform: scale(1.1);
+      z-index: 1;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +89,9 @@
       <img src="path_to_your_photo.jpg" alt="Your Photo">
     </div>
     <div class="horizontal-line"></div>
+    <div class="tab">Tab 1</div>
+    <div class="tab" style="left: calc(33.3333% + 6px);">Tab 2</div>
+    <div class="tab" style="left: calc(66.6666% + 6px);">Tab 3</div>
   </div>
 
   <script>
