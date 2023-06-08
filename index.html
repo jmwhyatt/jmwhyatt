@@ -1,104 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>One-Page Template</title>
+  <title>My Portfolio</title>
   <style>
-    /* CSS Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-    
-    .container {
-      height: 100vh;
+
+    #header {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
+      align-items: center;
       padding: 20px;
     }
-    
-    .name {
-      font-size: 48px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      cursor: default;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-      animation: bounce 1s infinite alternate;
-    }
-    
-    @keyframes bounce {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-    
-    .tabs {
-      display: flex;
-      flex-direction: column;
-      margin-left: 20px;
-    }
-    
-    .tab {
+
+    #photo {
       width: 100px;
-      height: 40px;
-      margin-bottom: 10px;
-      background-color: #ddd;
-      line-height: 40px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
     }
-    
-    .tab:hover {
-      background-color: #aaa;
-      height: 60px; /* Expanded height */
+
+    #name {
+      font-size: 24px;
+      font-weight: bold;
     }
-    
-    .content {
-      display: none;
-      margin-top: 20px;
+
+    #line {
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      margin-top: 10px;
+    }
+
+    #content {
+      display: flex;
+    }
+
+    #tabs {
+      width: 200px;
+      background-color: #f1f1f1;
       padding: 20px;
-      background-color: #eee;
+    }
+
+    .tab {
+      margin-bottom: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #d9d9d9;
+    }
+
+    .tab:hover {
+      background-color: #ccc;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="name">Your Name</div>
-    <div class="tabs">
-      <div class="tab" onmouseover="toggleContent(0)" onmouseout="toggleContent(0)">Tab 1</div>
-      <div class="tab" onmouseover="toggleContent(1)" onmouseout="toggleContent(1)">Tab 2</div>
-      <div class="tab" onmouseover="toggleContent(2)" onmouseout="toggleContent(2)">Tab 3</div>
+  <div id="header">
+    <img id="photo" src="your_photo.jpg" alt="Your Photo">
+    <div>
+      <div id="name">Your Name</div>
+      <div id="line"></div>
     </div>
-    <div class="content">Content for Tab 1</div>
-    <div class="content">Content for Tab 2</div>
-    <div class="content">Content for Tab 3</div>
+  </div>
+
+  <div id="content">
+    <div id="tabs">
+      <div class="tab" onclick="showContent(1)">Tab 1</div>
+      <div class="tab" onclick="showContent(2)">Tab 2</div>
+      <div class="tab" onclick="showContent(3)">Tab 3</div>
+    </div>
+    <div id="tabContent1" class="tab-content">
+      Content for Tab 1
+    </div>
+    <div id="tabContent2" class="tab-content">
+      Content for Tab 2
+    </div>
+    <div id="tabContent3" class="tab-content">
+      Content for Tab 3
+    </div>
   </div>
 
   <script>
-    // JavaScript code
-    function toggleContent(index) {
-      var contents = document.getElementsByClassName("content");
-      var tabs = document.getElementsByClassName("tab");
-      var name = document.getElementsByClassName("name")[0];
-      
-      for (var i = 0; i < contents.length; i++) {
-        if (i === index) {
-          contents[i].style.display = "block";
-          tabs[i].style.height = "60px";
-        } else {
-          contents[i].style.display = "none";
-          tabs[i].style.height = "40px";
-        }
+    function showContent(tabIndex) {
+      var contentElements = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < contentElements.length; i++) {
+        contentElements[i].style.display = "none";
       }
+
+      var selectedContent = document.getElementById("tabContent" + tabIndex);
+      selectedContent.style.display = "block";
     }
   </script>
 </body>
