@@ -28,16 +28,26 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      animation: bounce 1s infinite alternate;
+    }
+    
+    @keyframes bounce {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+      50% {
+        transform: translate(-50%, -60%);
+      }
+      100% {
+        transform: translate(-50%, -50%);
+      }
     }
     
     .tabs {
       display: flex;
       justify-content: center;
       margin-top: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
     
     .tab {
@@ -58,13 +68,9 @@
     
     .content {
       display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin-top: 20px;
       padding: 20px;
       background-color: #eee;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -86,11 +92,12 @@
     function toggleContent(index) {
       var contents = document.getElementsByClassName("content");
       var tabs = document.getElementsByClassName("tab");
+      var name = document.getElementsByClassName("name")[0];
       
       for (var i = 0; i < contents.length; i++) {
         if (i === index) {
           contents[i].style.display = "block";
-          tabs[i].style.width = "200px";
+          tabs[i].style.width = name.offsetWidth + "px";
         } else {
           contents[i].style.display = "none";
           tabs[i].style.width = "100px";
