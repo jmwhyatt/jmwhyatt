@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Divided Screen Template</title>
+  <title>Vertical Rectangle Template</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body, html {
+      height: 100%;
       margin: 0;
       padding: 0;
     }
 
-    .container {
+    #rectangle {
+      background-color: #f1f1f1;
+      width: 70%;
+      max-width: 600px;
+      height: 100%;
+      margin: 0 auto;
       display: flex;
-      width: 600px; /* Adjust the width as per your preference */
-      height: 400px; /* Adjust the height as per your preference */
-    }
-
-    .vertical-line, .horizontal-line {
-      border: 1px solid black;
-    }
-
-    .vertical-line {
-      width: 33.3333%;
-    }
-
-    .horizontal-line {
-      flex-grow: 2;
-    }
-
-    .square {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 33.3333%;
-      height: 33.3333%;
-      border: 1px solid red;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #ccc;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="vertical-line"></div>
-    <div class="horizontal-line"></div>
+  <div id="rectangle">
+    <!-- Content goes here -->
   </div>
-  <div class="square"></div>
 
   <script>
-    // JavaScript code can be added here if needed
+    // JavaScript code goes here
   </script>
 </body>
 </html>
+
