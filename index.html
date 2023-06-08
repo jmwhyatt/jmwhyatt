@@ -29,16 +29,6 @@
       left: 33.3333%;
     }
 
-    .horizontal-line {
-      width: calc(66.6666% - 33.3333%);
-      height: 2px;
-      background-color: #000;
-      position: absolute;
-      top: 50%;
-      left: 33.3333%;
-      transform: translate(-50%, -50%);
-    }
-
     #photo {
       position: absolute;
       top: 10px;
@@ -61,16 +51,25 @@
       z-index: 1;
       cursor: pointer;
     }
+
+    .horizontal-line {
+      width: calc(33.3333% - 12px);
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      top: 170px;
+      left: 10px;
+    }
   </style>
 </head>
 <body>
   <div id="rectangle">
     <div class="vertical-line"></div>
-    <div class="horizontal-line"></div>
     <!-- Content goes here -->
     <div id="photo">
       <img src="path_to_your_photo.jpg" alt="Your Photo">
     </div>
+    <div class="horizontal-line"></div>
   </div>
 
   <script>
