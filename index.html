@@ -45,6 +45,7 @@
     
     .tab:hover {
       background-color: #aaa;
+      width: 200px; /* Expanded width */
     }
     
     .content {
@@ -72,15 +73,19 @@
     // JavaScript code
     function toggleContent(index) {
       var contents = document.getElementsByClassName("content");
+      var tabs = document.getElementsByClassName("tab");
+      var name = document.getElementsByClassName("name")[0];
+      
       for (var i = 0; i < contents.length; i++) {
         if (i === index) {
           contents[i].style.display = "block";
+          tabs[i].style.width = name.offsetWidth + "px";
         } else {
           contents[i].style.display = "none";
+          tabs[i].style.width = "100px";
         }
       }
     }
   </script>
 </body>
 </html>
-
