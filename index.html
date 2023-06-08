@@ -29,6 +29,15 @@
       left: 33.3333%;
     }
 
+    .horizontal-line {
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      top: 170px; /* Adjust the distance below the photo as needed */
+      left: 0;
+    }
+
     #photo {
       position: absolute;
       top: 10px;
@@ -46,17 +55,6 @@
       object-fit: cover;
     }
 
-    #photo::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #000;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-    }
-
     #photo:hover {
       transform: scale(1.1);
       z-index: 1;
@@ -67,6 +65,7 @@
 <body>
   <div id="rectangle">
     <div class="vertical-line"></div>
+    <div class="horizontal-line"></div>
     <!-- Content goes here -->
     <div id="photo">
       <img src="path_to_your_photo.jpg" alt="Your Photo">
