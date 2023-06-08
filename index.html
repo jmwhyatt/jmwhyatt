@@ -28,12 +28,38 @@
       position: absolute;
       left: 33.3333%;
     }
+
+    #photo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    #photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #photo:hover {
+      transform: scale(1.1);
+      z-index: 1;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div id="rectangle">
     <div class="vertical-line"></div>
     <!-- Content goes here -->
+    <div id="photo">
+      <img src="path_to_your_photo.jpg" alt="Your Photo">
+    </div>
   </div>
 
   <script>
