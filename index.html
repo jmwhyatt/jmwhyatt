@@ -91,6 +91,16 @@
       margin-bottom: 10px;
       color: #005B4A;
     }
+
+    .section-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .section-content.expanded {
+      max-height: 1000px; /* Adjust to fit the content height */
+    }
   </style>
   <script>
     // JavaScript
@@ -98,14 +108,14 @@
       const sectionTitles = document.querySelectorAll(".section-title");
       sectionTitles.forEach(function (sectionTitle) {
         sectionTitle.addEventListener("mouseenter", function () {
-          // Close other sections
+          const currentSectionContent = this.nextElementSibling;
           sectionTitles.forEach(function (title) {
-            if (title !== sectionTitle) {
-              title.nextElementSibling.classList.remove("expanded");
+            const sectionContent = title.nextElementSibling;
+            if (sectionContent !== currentSectionContent) {
+              sectionContent.classList.remove("expanded");
             }
           });
-
-          this.nextElementSibling.classList.toggle("expanded");
+          currentSectionContent.classList.toggle("expanded");
         });
       });
     });
