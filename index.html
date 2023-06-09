@@ -33,6 +33,13 @@
       padding-top: 20px;
       margin-top: 20px;
       cursor: pointer;
+      transition: max-height 0.3s ease;
+      overflow: hidden;
+      max-height: 500px; /* Initial height */
+    }
+
+    .section.expanded {
+      max-height: none; /* Expand the section */
     }
 
     .section h2 {
