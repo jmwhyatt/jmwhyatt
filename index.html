@@ -32,8 +32,8 @@
     
     .content-container {
       display: flex;
+      width: 100%;
       justify-content: space-between;
-      width: 80%;
       margin-top: 50px;
     }
     
@@ -43,14 +43,7 @@
       padding: 20px;
       margin: 0 10px;
       text-align: center;
-    }
-    
-    .content-box:nth-child(even) {
-      transform: scaleY(-1);
-    }
-    
-    .content-box p {
-      margin: 0;
+      height: 300px; /* Adjust the height as needed */
     }
     
     .bar {
@@ -66,7 +59,7 @@
       background-color: #C9C3DC;
       transition: transform 0.3s, z-index 0.3s;
       cursor: pointer;
-      height: 20px; /* Adjust the height as needed */
+      height: 30px; /* Adjust the height as needed */
     }
     
     .tab:hover {
@@ -77,13 +70,13 @@
 </head>
 <body>
   <div class="container">
-    <div class="name">Jacob M. Whyatt</div>
     <div class="content-container">
       <div class="content-box">
-        <p>Content Box 1</p>
+        <p>Left Content</p>
       </div>
+      <div class="name">Jacob M. Whyatt</div>
       <div class="content-box">
-        <p>Content Box 2</p>
+        <p>Right Content</p>
       </div>
     </div>
     <div class="bar">
