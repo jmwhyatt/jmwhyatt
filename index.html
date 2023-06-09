@@ -44,6 +44,7 @@
       margin: 0 10px;
       text-align: center;
       height: 300px; /* Adjust the height as needed */
+      display: none; /* Hide the content boxes by default */
     }
     
     .bar {
@@ -68,23 +69,40 @@
       z-index: 1;
     }
   </style>
+  <script>
+    // JavaScript code to handle tab hover functionality
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const tabs = document.querySelectorAll('.tab');
+      const contentBoxes = document.querySelectorAll('.content-box');
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('mouseover', () => {
+          // Hide all content boxes
+          contentBoxes.forEach((contentBox) => {
+            contentBox.style.display = 'none';
+          });
+
+          // Show the corresponding content box based on the hovered tab index
+          contentBoxes[index].style.display = 'block';
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="container">
     <div class="content-container">
       <div class="content-box">
-        <p>Left Content</p>
+        <p>Content for Tab 1</p>
       </div>
       <div class="content-box">
-        <p>Right Content</p>
+        <p>Content for Tab 2</p>
+      </div>
+      <div class="content-box">
+        <p>Content for Tab 3</p>
       </div>
     </div>
     <div class="name">Jacob M. Whyatt</div>
     <div class="bar">
       <div class="tab">Tab 1</div>
-      <div class="tab">Tab 2</div>
-      <div class="tab">Tab 3</div>
-    </div>
-  </div>
-</body>
-</html>
+
