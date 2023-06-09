@@ -32,6 +32,7 @@
       border-top: 1px solid #005B4A;
       padding-top: 20px;
       margin-top: 20px;
+      cursor: pointer;
     }
 
     .section h2 {
@@ -83,6 +84,20 @@
       color: #005B4A;
     }
   </style>
+  <script>
+    // JavaScript
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".section");
+      sections.forEach(function (section) {
+        section.addEventListener("mouseenter", function () {
+          this.classList.add("expanded");
+        });
+        section.addEventListener("mouseleave", function () {
+          this.classList.remove("expanded");
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
