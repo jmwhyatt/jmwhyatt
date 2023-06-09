@@ -1,113 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jacob M. Whyatt</title>
   <style>
-    /* CSS Styles */
+    /* CSS Styling */
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #938EA5;
-      color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-    
+
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    
-    .name {
-      font-size: 60px; /* Adjust the font size as needed */
-      font-weight: bold;
-      color: #C9C3DC;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      animation: floatAnimation 5s infinite;
-      margin-bottom: 20px; /* Adjust the bottom margin as needed */
-    }
-    
-    .content-container {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-    
-    .content-box {
-      flex-grow: 1;
-      background-color: #C9C3DC;
+      max-width: 800px;
+      margin: 0 auto;
       padding: 20px;
-      margin: 0 10px;
-      text-align: center;
-      height: 300px; /* Adjust the height as needed */
-      display: none; /* Hide the content boxes by default */
     }
-    
-    .bar {
-      display: flex;
-      justify-content: center;
-      width: 600px; /* Adjust the width as needed */
+
+    .section {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
       margin-top: 20px;
-      margin-bottom: 20px; /* Adjust the bottom margin as needed */
     }
-    
-    .tab {
-      flex-grow: 1;
-      padding: 5px 10px; /* Adjust the padding as needed */
-      background-color: #C9C3DC;
-      transition: transform 0.3s, z-index 0.3s;
-      cursor: pointer;
-      height: 30px; /* Adjust the height as needed */
+
+    .section h2 {
+      margin: 0;
     }
-    
-    .tab:hover {
-      transform: translateY(-10px) scale(1.1);
-      z-index: 1;
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+    }
+
+    .timeline li {
+      margin-bottom: 20px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-info li {
+      margin-bottom: 10px;
     }
   </style>
-  <script>
-    // JavaScript code to handle tab hover functionality
-    window.addEventListener('DOMContentLoaded', (event) => {
-      const tabs = document.querySelectorAll('.tab');
-      const contentBoxes = document.querySelectorAll('.content-box');
-
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('mouseover', () => {
-          // Hide all content boxes
-          contentBoxes.forEach((contentBox) => {
-            contentBox.style.display = 'none';
-          });
-
-          // Show the corresponding content box based on the hovered tab index
-          contentBoxes[index].style.display = 'block';
-        });
-      });
-    });
-  </script>
 </head>
+
 <body>
   <div class="container">
-    <div class="content-container">
-      <div class="content-box">
-        <p>Career</p>
-      </div>
-      <div class="content-box">
-        <p>Skills</p>
-      </div>
-      <div class="content-box">
-        <p>Contact</p>
-      </div>
+    <h1>Jacob M. Whyatt</h1>
+
+    <div class="section">
+      <h2>Career</h2>
+      <ul class="timeline">
+        <li>
+          <h3>Job Title 1</h3>
+          <p>Job description and responsibilities.</p>
+          <p>Date range</p>
+        </li>
+        <li>
+          <h3>Job Title 2</h3>
+          <p>Job description and responsibilities.</p>
+          <p>Date range</p>
+        </li>
+        <!-- Add more job entries as needed -->
+      </ul>
     </div>
-    <div class="name">Jacob M. Whyatt</div>
-    <div class="bar">
-      <div class="tab">Career</div>
-      <div class="tab">Skills</div>
-      <div class="tab">Contact </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>IT</li>
+        <li>Web Development</li>
+        <li>Programming</li>
+        <!-- Add more skills as needed -->
+      </ul>
+    </div>
+
+    <div class="section contact-info">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: jacob@example.com</li>
+        <li>Phone: 123-456-7890</li>
+        <li>Website: www.example.com</li>
+        <!-- Add more contact information as needed -->
+      </ul>
+    </div>
+
   </div>
 </body>
-</html>
 
+</html>
