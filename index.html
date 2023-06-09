@@ -40,13 +40,14 @@
       flex-grow: 1;
       padding: 10px;
       background-color: #C9C3DC;
-      transition: transform 0.3s;
+      transition: transform 0.3s, z-index 0.3s;
       cursor: pointer;
       height: 40px; /* Adjust the height as needed */
     }
     
     .tab:hover {
-      transform: scale(1.2);
+      transform: translateY(-10px) scale(1.1);
+      z-index: 1;
     }
   </style>
 </head>
@@ -54,9 +55,9 @@
   <div class="container">
     <div class="name">Jacob M. Whyatt</div>
     <div class="bar">
-      <div class="tab">Experience</div>
-      <div class="tab">Skills</div>
-      <div class="tab">Contact</div>
+      <div class="tab">Tab 1</div>
+      <div class="tab">Tab 2</div>
+      <div class="tab">Tab 3</div>
     </div>
   </div>
 </body>
