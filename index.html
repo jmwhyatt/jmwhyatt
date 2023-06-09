@@ -28,21 +28,22 @@
       margin-bottom: 30px;
     }
 
-    .section {
+    .section-title {
       border-top: 1px solid #005B4A;
       padding-top: 20px;
       margin-top: 20px;
       cursor: pointer;
       transition: max-height 0.3s ease;
       overflow: hidden;
-      max-height: 500px; /* Initial height */
+      max-height: 40px; /* Initial height */
     }
 
-    .section.expanded {
+    .section-title:hover,
+    .section-content.expanded {
       max-height: none; /* Expand the section */
     }
 
-    .section h2 {
+    .section-title h2 {
       margin: 0;
       color: #005B4A;
     }
@@ -94,13 +95,17 @@
   <script>
     // JavaScript
     document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll(".section");
-      sections.forEach(function (section) {
-        section.addEventListener("mouseenter", function () {
-          this.classList.add("expanded");
-        });
-        section.addEventListener("mouseleave", function () {
-          this.classList.remove("expanded");
+      const sectionTitles = document.querySelectorAll(".section-title");
+      sectionTitles.forEach(function (sectionTitle) {
+        sectionTitle.addEventListener("mouseenter", function () {
+          // Close other sections
+          sectionTitles.forEach(function (title) {
+            if (title !== sectionTitle) {
+              title.nextElementSibling.classList.remove("expanded");
+            }
+          });
+
+          this.nextElementSibling.classList.toggle("expanded");
         });
       });
     });
@@ -111,8 +116,10 @@
   <div class="container">
     <h1>Jacob M. Whyatt</h1>
 
-    <div class="section">
+    <div class="section-title">
       <h2>Career</h2>
+    </div>
+    <div class="section-content">
       <ul class="timeline">
         <li>
           <h3>Job Title 1</h3>
@@ -128,8 +135,10 @@
       </ul>
     </div>
 
-    <div class="section">
+    <div class="section-title">
       <h2>Skills</h2>
+    </div>
+    <div class="section-content">
       <ul class="skills-list">
         <li>IT</li>
         <li>Web Development</li>
@@ -138,8 +147,10 @@
       </ul>
     </div>
 
-    <div class="section contact-info">
+    <div class="section-title">
       <h2>Contact</h2>
+    </div>
+    <div class="section-content contact-info">
       <ul>
         <li>Email: jacob@example.com</li>
         <li>Phone: 123-456-7890</li>
