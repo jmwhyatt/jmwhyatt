@@ -30,10 +30,34 @@
       animation: floatAnimation 5s infinite;
     }
     
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 50px;
+    }
+    
+    .content-box {
+      flex-grow: 1;
+      background-color: #C9C3DC;
+      padding: 20px;
+      margin: 0 10px;
+      text-align: center;
+    }
+    
+    .content-box:nth-child(even) {
+      transform: scaleY(-1);
+    }
+    
+    .content-box p {
+      margin: 0;
+    }
+    
     .bar {
       display: flex;
       justify-content: center;
       width: 600px; /* Adjust the width as needed */
+      margin-top: 20px;
     }
     
     .tab {
@@ -54,6 +78,14 @@
 <body>
   <div class="container">
     <div class="name">Jacob M. Whyatt</div>
+    <div class="content-container">
+      <div class="content-box">
+        <p>Content Box 1</p>
+      </div>
+      <div class="content-box">
+        <p>Content Box 2</p>
+      </div>
+    </div>
     <div class="bar">
       <div class="tab">Tab 1</div>
       <div class="tab">Tab 2</div>
